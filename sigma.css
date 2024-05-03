@@ -1,12 +1,16 @@
 /*
-	Sigma-10
-	[2023 Wikidot Theme]
-	Maintained by the EN SCP Wiki Technical Team, based on:
+	Sigma-10 (Localized for JP)
+	[2024 Wikidot Theme]
+	Maintained by the JP SCP Wiki Technical Team, based on:
 
-	Sigma-9
-	[2014 Wikidot Theme]
-	Created for the SCP Foundation by Aelanna
-	Edited for SCP Foundation by Dr Devan
+		Sigma-10
+		[2023 Wikidot Theme]
+		Maintained by the EN SCP Wiki Technical Team, based on:
+
+		Sigma-9
+		[2014 Wikidot Theme]
+		Created for the SCP Foundation by Aelanna
+		Edited for SCP Foundation by Dr Devan
 */
 
 @charset "utf-8";
@@ -14,7 +18,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 /* Don't remove Bauhaus yet, still onsite dependencies to resolve */
-@import url('https://scp-wiki.wdfiles.com/local--files/component%3Atheme/font-bauhaus.css');
+@import url('https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css');
 
 /* FONT-FACE */
 @font-face {
@@ -22,7 +26,7 @@
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url('https://scpwiki.github.io/sigma/fonts/Inter-roman.var.woff2?v=3.19')
+	src: url('https://mikukaneko.github.io/sigma/fonts/Inter-roman.var.woff2?v=3.19')
 		format('woff2');
 }
 
@@ -31,7 +35,7 @@
 	font-style: italic;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url('https://scpwiki.github.io/sigma/fonts/Inter-italic.var.woff2?v=3.19')
+	src: url('https://mikukaneko.github.io/sigma/fonts/Inter-italic.var.woff2?v=3.19')
 		format('woff2');
 }
 
@@ -40,25 +44,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url('https://scpwiki.github.io/sigma/fonts/Sans-Normalcy.woff2')
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'Nanum Gothic';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('https://scpwiki.github.io/sigma/fonts/NanumGothic-Regular.woff2')
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'Nanum Gothic';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url('https://scpwiki.github.io/sigma/fonts/NanumGothic-Bold.woff2')
+	src: url('https://mikukaneko.github.io/sigma/fonts/Sans-Normalcy.woff2')
 		format('woff2');
 }
 
@@ -182,7 +168,7 @@ textarea {
 }
 
 div#container-wrap {
-	background: url('https://scpwiki.github.io/sigma/images/body_bg.svg') top
+	background: url('https://mikukaneko.github.io/sigma/images/body_bg.svg') top
 		left repeat-x;
 }
 
@@ -198,7 +184,7 @@ sup {
 	position: relative;
 	z-index: 10;
 	padding-bottom: 22px; /* FOR MENU */
-	background: url('https://scpwiki.github.io/sigma/images/header-logo.svg')
+	background: url('https://mikukaneko.github.io/sigma/images/header-logo.svg')
 		10px 40px no-repeat;
 	background-size: 100px;
 	background-position: 10px 64%;
@@ -310,7 +296,7 @@ sup {
 	max-height: 0;
 	color: #eee;
 	background: transparent;
-	font-family: 'Sans Normalcy', 'Nanum Gothic', Arial, sans-serif;
+	font-family: 'Sans Normalcy', Arial, sans-serif;
 	font-size: 1.5em;
 	text-decoration: none;
 	text-shadow: 3px 3px 5px #000;
@@ -576,7 +562,7 @@ sup {
 		top: 1rem;
 		left: 1rem;
 		z-index: 15;
-		font-family: 'Nanum Gothic', sans-serif;
+		font-family: sans-serif;
 		font-size: 30px;
 		font-weight: 700;
 		width: 30px;
@@ -777,7 +763,7 @@ div.sexy-box div.image-container img {
 .content-panel .panel-body {
 	padding: 5px 10px;
 	background: #fff9f0
-		url('https://scp-wiki.wdfiles.com/local--files/component:theme/panel-bg-gradient-reverse.png')
+		url('https://scp-jp.github.io/files/util/common/media/component/theme//panel-bg-gradient-reverse.png')
 		bottom repeat-x;
 }
 
@@ -931,6 +917,15 @@ div.page-rate-widget-box .rate-points {
 .scp-image-block .scp-image-caption > p {
 	margin: 0;
 	padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+	.scp-clear-true.scp-image-block {
+		float: none;
+		clear: both;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /* Collapsible Link */
@@ -1358,6 +1353,214 @@ div#u-adult-warning > .error-block {
 	margin: unset;
 	border: unset;
 	margin-bottom: 1em;
+}
+
+/* Colmod */
+.colmod-block > ul,
+.colmod-block > ul > li {
+	display: block;
+	line-height: normal;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.colmod-block > ul > li > ul,
+li.folded > .colmod-link-top a + a,
+li.folded > .colmod-content,
+li.folded > .colmod-link-end a,
+li.unfolded > .colmod-link-top a:first-child {
+	display: none;
+}
+
+.colmod-content {
+	animation: colmod-fade-in 0.2s ease-in-out;
+	animation-timing-function: cubic-bezier(0.365, 0, 0.635, 1);
+}
+
+li.folded > .colmod-content {
+	animation-name: none;
+}
+
+@keyframes colmod-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes colmod-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes colmod-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+[class|='colmod-link'] div.foldable-list-container {
+	display: inline;
+}
+
+[class|='colmod-link'] a {
+	overflow-wrap: anywhere;
+}
+
+/* メタタイトル折りたたみ用CSS */
+.content-panel.scp ul {
+	padding: 0 0 0 25px;
+}
+
+.content-panel.scp ul li {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	padding: 0 0 0 15px;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS  3D touch 不具合修正 */
+}
+
+.content-panel.scp ul li:hover {
+	-webkit-line-clamp: unset;
+	overflow: visible;
+}
+
+.content-panel.scp ul li::before {
+	background: #333;
+	content: '';
+	display: inline-block;
+	height: 5px;
+	margin: 0 10px 0 -15px;
+	vertical-align: middle;
+	width: 5px;
+}
+
+@media (max-width: 767px) {
+	.content-panel.scp .content-toc {
+		float: unset;
+	}
+}
+
+/* nav:topでPageOptionsが操作できない問題の修正 */
+#page-content .top-bar,
+#page-content .mobile-top-bar {
+	position: static;
+}
+
+/* _404, _template用CommonCSS */
+#page-content [class='wikisys--template-dialog'] {
+	width: 90%;
+	max-width: 32rem;
+	margin: 1.5rem auto;
+	padding: 1.5rem;
+	background: #f9f9f9;
+	border-radius: 1.5rem;
+	color: #301;
+	border: solid 1px #b7b7b7;
+}
+
+#page-content
+	[class='wikisys--template-dialog']
+	> [class='wikisys--template-dialog-header'] {
+	position: relative;
+	line-height: 1.5;
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding: 5px 0 5px 12px;
+}
+
+#page-content
+	[class='wikisys--template-dialog']
+	> [class='wikisys--template-dialog-header']::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 6px;
+	height: 100%;
+	opacity: 0.2;
+	border-radius: 3px;
+	background: #aaa;
+}
+
+#page-content
+	[class='wikisys--template-dialog']
+	> [class='wikisys--template-dialog-content'] {
+	line-height: 1.75;
+	margin: 1rem 0;
+}
+
+#page-content
+	[class='wikisys--template-dialog']
+	> [class='wikisys--template-dialog-footer'] {
+	font-size: 0.9rem;
+	margin-top: 1.5em;
+}
+
+#page-content
+	[class='wikisys--template-dialog']
+	> [class='wikisys--template-dialog-infoarea'] {
+	margin-top: 1.5rem;
+}
+
+/* Show-Changes Highlights from SCP-CN */
+.inline-diff ins:first-of-type::before,
+.inline-diff del:first-of-type::before,
+.inline-diff br + ins::before,
+.inline-diff br + del::before {
+	display: inline-block;
+	font: normal normal normal 1lh FontAwesome, sans-serif;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f111';
+	position: absolute;
+	left: 1.5rem;
+}
+
+.inline-diff ins::before {
+	color: #ddf;
+}
+
+.inline-diff del::before {
+	color: #fcc;
+}
+
+.inline-diff ins + del::before,
+.inline-diff del + ins::before {
+	color: transparent;
+}
+
+.ins {
+	background-color: #ddf;
+}
+
+.del {
+	background-color: #fcc;
+}
+
+/* printuser avaterhover非選択 */
+.printuser.avatarhover > a > img {
+	user-select: none;
+}
+
+.forum-category-box .title a:empty::after {
+	content: '\3000';
 }
 
 /* vim: set noet: */

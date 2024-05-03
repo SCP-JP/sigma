@@ -1,13 +1,13 @@
 {
-  "name": "sigma-theme",
-  "description": "SCP Wiki site theme (build process)",
+  "name": "sigma-theme-jp",
+  "description": "JP SCP Wiki site theme (build process)",
   "version": "1.0.0",
-  "authors": "SCP Wiki Technical Team",
+  "authors": "JP SCP Wiki Technical Team",
   "license": "CC-BY-SA-3.0",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/scpwiki/sigma"
+    "url": "https://github.com/SCP-JP/sigma"
   },
   "devDependencies": {
     "minify": "^9.2.0",
