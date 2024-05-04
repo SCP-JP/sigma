@@ -21,6 +21,15 @@
 @import url('https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css');
 
 /* FONT-FACE */
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-ExtraLight.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Light.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Thin.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Meidum.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Regular.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Text.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-SemiBold.css');
+@import url('https://mikukaneko.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Bold.css');
+
 @font-face {
 	font-family: Inter;
 	font-style: normal;
@@ -152,8 +161,7 @@ body {
 	background-color: #fff;
 	font-size: 0.95em;
 	color: #333;
-	font-family: Inter, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-family: Inter, 'IBM Plex Sans JP', sans-serif;
 	font-feature-settings: 'case', 'ss01', 'ss04';
 }
 
@@ -276,7 +284,7 @@ sup {
 	margin-left: 120px;
 	padding: 0;
 	float: left;
-	max-height: 95px;
+	max-height: 96px;
 }
 
 #header h2 {
@@ -291,16 +299,32 @@ sup {
 #header h1 a {
 	display: block;
 	margin: 0;
-	padding: 80px 0 25px;
+	padding: 77px 0 25px;
 	line-height: 0px;
 	max-height: 0;
 	color: #eee;
 	background: transparent;
-	font-family: 'Sans Normalcy', Arial, sans-serif;
+	font-family: 'Sans Normalcy', Arial, 'IBM Plex Sans JP', sans-serif;
 	font-size: 1.5em;
 	text-decoration: none;
 	text-shadow: 3px 3px 5px #000;
 	letter-spacing: 0.9px;
+}
+
+/*  ヘッダータイトルのアルファベットのずれを修正 */
+#header h1 a::before {
+	content: 'SCP';
+	font-size: 1.04em;
+}
+
+#header h1 a::after {
+	content: '財団';
+	vertical-align: middle;
+}
+
+#header h1 a span {
+	font-size: 0;
+	letter-spacing: 0;
 }
 
 #header h2 span {
