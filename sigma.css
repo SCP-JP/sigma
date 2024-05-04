@@ -160,6 +160,7 @@ a.newpage {
 body {
 	background-color: #fff;
 	font-size: 0.95em;
+	font-weight: 450;
 	color: #333;
 	font-family: Inter, 'IBM Plex Sans JP', sans-serif;
 	font-feature-settings: 'case', 'ss01', 'ss04';
