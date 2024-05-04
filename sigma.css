@@ -510,12 +510,7 @@ sup {
 
 #side-bar .menu-item img,
 #interwiki .menu-item img {
-	width: 13px;
-	height: 13px;
-	border: 0;
-	margin-right: 2px;
-	position: relative;
-	bottom: -2px;
+	display: none;
 }
 
 #side-bar a,
