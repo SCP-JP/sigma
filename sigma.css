@@ -300,7 +300,7 @@ sup {
 #header h1 a {
 	display: block;
 	margin: 0;
-	padding: 77px 0 25px;
+	padding: 79px 0 25px;
 	line-height: 0px;
 	max-height: 0;
 	color: #eee;
@@ -315,7 +315,7 @@ sup {
 /*  ヘッダータイトルのアルファベットのずれを修正 */
 #header h1 a::before {
 	content: 'SCP';
-	font-size: 1.04em;
+	font-size: 1.02em;
 }
 
 #header h1 a::after {
